@@ -28,6 +28,17 @@ public class LoopRun {
 //		forEx.ex20();
 		
 		
+		
+		WhileExample whileEx = new WhileExample();
+		
+//		whileEx.ex1();
+//		whileEx.ex2();
+//		whileEx.ex3();
+//		whileEx.ex4();
+//		whileEx.ex5();
+//		
+		
+		
 	}
 
 }
