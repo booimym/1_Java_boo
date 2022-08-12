@@ -306,42 +306,76 @@ public class BranchExample {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("몇 판? :");
-		int i =sc.nextInt();
-		int count1 = 0;
-		int count2 = 0;
-		int count3 = 0;
+		int round =sc.nextInt();
+		int win = 0;
+		int draw = 0;
+		int lose = 0;
 	
 		
-		for(int x=1 ;x<=i; x++) {
+		for(int x=1 ;x<=round ; x++) {
 			
-			int ran = (int)(Math.random() * 3);
-			System.out.println(x + "번째 게임");
+			System.out.println("\n"+ x + "번째 게임");
 			System.out.println("가위/바위/보 중 하나를 입력 해주세요 :");
-			String r = sc.next();
+			String player = sc.next(); // 사용자의 입력을 받는다.
+			
+			//컴퓨터 가위/바위/보를 지정하는 것.
+			int ran = (int)(Math.random() * 3); //0,1,2
+			String com = null; // String의 기본값 (없다 비슷한 거라고 생각하자)
+			//String s1 = null;	//참조하고 있는 게 없다.
+			//String s2 = ""; 	//비어있는 문자열
 			
 			
-			int rps = sc.nextInt();
+			switch(ran) {
+				case 0	: com = "가위"; break;
+				case 1	: com = "바위"; break;
+				case 2	: com = "보" ; break;
+			}//default는 생략 가능함.
+			System.out.printf("컴퓨터는 [%s]를 선택했습니다. \n", com);
+			
+			//사용자와 컴퓨터 가위,바위,보 승패 판별
+			//비교 연산은 기본 자료형끼리만 가능. String은 안 됨.
+			//String 비교시 equals() 사용
 			
 			
-			
-			if (ran == rps) {
+			if (player.equals(com) ) {
 				
 				System.out.println("비겼습니다");
-				System.out.println(ran);
-				count2++;
-			} else if (ran >= rps) {
-				System.out.println("졌습니다.");
-				System.out.println(ran);
-				count3++;
-				
+				draw++;
 			} else {
-				System.out.println("이겼습니다.");
-				System.out.println(ran);
-				count1++;
 				
-			}
+				//사용자 - 컴퓨터
+				//가위     보
+				//바위     가위
+				// 보     가위
+				
+				
+				
+				
+				//사용자가 이기는 경우에 true가 되는 상황을 미리 변수로 선언
+				boolean win1 = player.equals("가위") && com.equals("보")	;			
+				boolean win2 = player.equals("바위") && com.equals("가위")	;			
+				boolean win3 = player.equals("보") && com.equals("바위")	;			
+						
+				if(win1 || win2|| win3) {
+					System.out.println("이겼습니다");
+					win++;
+				}else {
+					System.out.println("졌습니다");
+					lose++;
+				}
 			
-			System.out.printf("%d승 %d무 %d패\n", count1,count2,count3);
+				}
+//			//else if (ran >= rps) {
+//				System.out.println("졌습니다.");
+//				count3++;
+//				
+//			} else {
+//				System.out.println("이겼습니다.");
+//				count1++;
+//				
+//			}
+//			
+			System.out.printf("현재 기록 : %d승 %d무 %d패\n", win,draw,lose);
 			
 		}
 		
