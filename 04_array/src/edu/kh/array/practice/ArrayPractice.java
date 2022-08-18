@@ -155,15 +155,15 @@ public class ArrayPractice {
 	}
 	
 	
-	public void practice8() {
+	public void practice8() { //모름
 		
-		Scanner sc = new Scanner(System.in);
-		int input =sc.nextInt();
-		if((input<3) && (input%2 ==0)) {
-			
-			System.out.println("다시 입력하세요");
-			
-			
+//		Scanner sc = new Scanner(System.in);
+//		int input =sc.nextInt();
+//		if((input<3) && (input%2 ==0)) {
+//			
+//			System.out.println("다시 입력하세요");
+//			
+//			
 //		} else {
 //			
 //			int[] arr = new int[input];
@@ -180,7 +180,7 @@ public class ArrayPractice {
 //				}
 //			} 
 //		}
-//	}
+	}
 	
 	
 	public void practice9() {
@@ -204,9 +204,48 @@ public class ArrayPractice {
 	}
 	
 	
+	public void practice14() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("배열의 크기를 입력하세요 :");
+		int input = sc.nextInt();
+		String[] str = new String[input];
+		sc.nextLine();
+		
+		System.out.print("1번째 문자열 :");
+		str[0]=sc.nextLine();
+		
+		System.out.print("2번째 문자열 :");
+		str[1]=sc.next();
+		
+		System.out.print("3번째 문자열 :");
+		str[2]=sc.next();
+		
+		//뭐 개행어쩌고 이랬던 거 같은데 어디서 배웟더라...
+		
+		System.out.println(); //주소 나오게 하는 거말고 나열이 뭐였지 arrays이랬던거같은데
+		
+	}
 	
-	
-	
+	public void practice15() {
+		
+		
+		int[] arr = new int[4][4];
+		
+		for(int row = 0; row <= 4; row++) {
+			
+			for(int col = 0;col <=4;col++) {
+				
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	
