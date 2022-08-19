@@ -111,41 +111,46 @@ public class ArrayPractice {
 		
 	}
 	
-//	public void practice5() {
-//		
-//		Scanner sc = new Scanner(System.in);
-//		System.out.print("문자열 :");
-//		String str = sc.next();
-//	
-//		char[] arr = new char[str.length()];
-//		
-//		for(int i = 0; i <arr.length;i++) {
-//			arr[i] = str.charAt(i);
-//		
-//		
-//		}
-//	
-//	
-//		System.out.print("문자 :");
-//		String str1 =sc.next();
-//		
-//		char ch = sc.nextLine().charAt(0);
-//		
-//		System.out.println(str+"에"+ch+"가 " );
-//
-//		for(;;) {
-//			
-//			if(arr[i] == ch) {
-//				
-//				System.out.println();
-//				
-//			}
-//			
-//		}
-//		
-//	}
-//		//문자를 얻어와야하는데, 
-//		
+	public void practice5() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 :");
+		String str = sc.nextLine(); //왜 nextLine일까? 띄어쓰기도 안했는데?
+									//next라고 하면 오류 뜬다.
+	
+		char[] arr = new char[str.length()]; 
+		
+		for(int i = 0; i <arr.length;i++) {
+			arr[i] = str.charAt(i);
+		
+		
+		}
+	
+	
+		System.out.print("문자 :");
+
+		
+		char ch = sc.nextLine().charAt(0);
+		
+		System.out.print(str+"에"+ch+"가 존재하는 위치(인덱스) : " );
+		int count = 0;
+		for(int i=0;i<arr.length;i++) {
+			
+			if(arr[i] == ch) {
+				
+				System.out.print(i);
+				
+				count++;
+			}
+		}
+		System.out.println();
+		
+		System.out.print(ch+"개수 : ");
+		
+		System.out.println(count);
+	}
+		//
+		
 		
 	
 	
@@ -173,6 +178,18 @@ public class ArrayPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("주민등록번호(-포함) :");
+		String str = sc.next();
+		char[] arr = new char[str.length()];
+		for(int i=0;i<arr.length;i++) {
+			arr[i] = str.charAt(i);
+			
+			if(i<=7) {
+				System.out.print(str.charAt(i));
+		} else {
+			System.out.print("*");
+		}
+		}
+		
 		
 	}
 	
@@ -220,6 +237,27 @@ public class ArrayPractice {
 	public void practice10() {
 		
 		//최대값, 최소값
+		
+		int[] arr = new int[10];
+		
+		int ran = (int)Math.random()*11;
+		System.out.print("발생한 난수:");
+		for(int i = 0; i<arr.length; i++) {
+			arr[i]=ran;
+		System.out.print(ran);
+		}
+		
+		
+		//엥 왜 0000나옴? --
+	}
+	
+	
+	public void practice13() {
+		
+		
+		
+		
+		
 		
 		
 		
