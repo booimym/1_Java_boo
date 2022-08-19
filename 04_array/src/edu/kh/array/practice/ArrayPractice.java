@@ -116,16 +116,38 @@ public class ArrayPractice {
 //		Scanner sc = new Scanner(System.in);
 //		System.out.print("문자열 :");
 //		String str = sc.next();
+//	
+//		char[] arr = new char[str.length()];
+//		
+//		for(int i = 0; i <arr.length;i++) {
+//			arr[i] = str.charAt(i);
+//		
+//		
+//		}
+//	
+//	
 //		System.out.print("문자 :");
 //		String str1 =sc.next();
 //		
-//		char ch = sc.next().charAt(input);
+//		char ch = sc.nextLine().charAt(0);
 //		
+//		System.out.println(str+"에"+ch+"가 " );
+//
+//		for(;;) {
+//			
+//			if(arr[i] == ch) {
+//				
+//				System.out.println();
+//				
+//			}
+//			
+//		}
 //		
+//	}
 //		//문자를 얻어와야하는데, 
 //		
-//		
-//	
+		
+	
 	
 	
 	
@@ -227,19 +249,19 @@ public class ArrayPractice {
 		
 	}
 	
-	public void practice15() {
-		
-		
-		int[] arr = new int[4][4];
-		
-		for(int row = 0; row <= 4; row++) {
-			
-			for(int col = 0;col <=4;col++) {
-				
-				
-			}
-		}
-		
+//	public void practice15() {
+//		
+//		
+//		int[] arr = new int[4][4];
+//		
+//		for(int row = 0; row <= 4; row++) {
+//			
+//			for(int col = 0;col <=4;col++) {
+//				
+//				
+//			}
+//		}
+//		
 		
 		
 		
@@ -249,4 +271,4 @@ public class ArrayPractice {
 	
 	
 	
-}
+

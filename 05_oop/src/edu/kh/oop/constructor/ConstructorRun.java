@@ -1,6 +1,7 @@
 package edu.kh.oop.constructor;
 
 import edu.kh.oop.constructor.model.vo.Member;
+import edu.kh.oop.field.model.vo.Temp;
 
 public class ConstructorRun {
 
@@ -26,6 +27,10 @@ public class ConstructorRun {
 		
 		Member member6 = new Member("냥","안알려줌","010101010101",11);
 		Member member7 = new Member("멍","password","01234566",11);
+		
+		
+		
+		Temp t1 = new Temp(); //기본 생성자가 존재함.
 		
 		
 		

@@ -64,7 +64,7 @@ public class Member {
 		
 		//생성된 객체의 필드를 매개변수 초기화
 //				(필드 = 매개변수)
-		this.memberId = memberId;
+		this.memberId = memberId; // 매개변수값 대입.
 		this.memberPw = memberPw;
 		this.memberPhone = memberPhone;
 		this.memberAge = memberAge;
@@ -112,7 +112,7 @@ public class Member {
 		//전달받은 매개변수로 현재 객체 필드 초기화
 		
 //		(현재객체가 가지고 있는 거에 매개변수값 대입하겠다.)
-		this.memberAge = memberAge;
+		this.memberAge = memberAge; 
 		this.memberPhone = memberPhone;
 		
 		
