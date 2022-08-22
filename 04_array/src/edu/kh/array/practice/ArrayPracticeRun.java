@@ -5,7 +5,7 @@ public class ArrayPracticeRun {
 	public static void main(String[] args) {
 		
 		
-		ArrayPractice ap = new ArrayPractice();
+		ArrayPractice1 ap = new ArrayPractice1();
 		
 //		ap.practice1();
 //		ap.practice2();
@@ -16,7 +16,7 @@ public class ArrayPracticeRun {
 //		ap.practice7();
 //		ap.practice8();
 //		ap.practice9();
-		ap.practice10();
+//		ap.practice10();
 //		ap.practice11();
 //		ap.practice12();
 //		ap.practice13();

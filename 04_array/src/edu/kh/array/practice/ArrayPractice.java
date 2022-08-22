@@ -156,100 +156,26 @@ public class ArrayPractice {
 	
 	
 	
-	public void practice6() {
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("정수 :" );
-		int input = sc.nextInt();
-		int[] arr = new int[input];
-		int sum = 0;
-		for(int i = 0 ; i <arr.length ; i++) {
-			System.out.print("배열"+i+"번째 인덱스에 넣을 값 : ");
-			arr[i] = sc.nextInt();
-			sum += i;
-		}
-		System.out.println(Arrays.toString(arr));
-		System.out.printf("총합 : %d",sum);
-		
+	```
+	//switch쓰려면 어떻게 해야돼??
+
+	if (input == arr[0]) {
+		System.out.print("\\n인덱스 :" + arr[0] );
+	} else if (input == arr[1]) {
+		System.out.print("\\n인덱스 :" + arr[1]);
+	}else if (input == arr[2]) {
+		System.out.print("\\n인덱스 :" + arr[2]);
+	}else if (input == arr[3]) {
+		System.out.print("\\n인덱스 :" + arr[3]);
+	}else if (input == arr[4]) {
+		System.out.print("\\n인덱스 :" + arr[4]);
+	}else {
+		System.out.print("\\n일치하는 값이 존재하지 않습니다.");
 	}
-	
-	
-	public void practice7() {
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("주민등록번호(-포함) :");
-		String str = sc.next();
-		char[] arr = new char[str.length()];
-		for(int i=0;i<arr.length;i++) {
-			arr[i] = str.charAt(i);
-			
-			if(i<=7) {
-				System.out.print(str.charAt(i));
-		} else {
-			System.out.print("*");
-		}
-		}
-		
-		
-	}
-	
-	
-	public void practice8() { //모름
-		
-//		Scanner sc = new Scanner(System.in);
-//		int input =sc.nextInt();
-//		if((input<3) && (input%2 ==0)) {
-//			
-//			System.out.println("다시 입력하세요");
-//			
-//			
-//		} else {
-//			
-//			int[] arr = new int[input];
-//			
-//			if(arr[num] <= ((input-1)/2)) {
-//				
-//				for(int i = 1 ; i<=(2*input-1) ;i++) {
-//					
-//				}
-//			} else {
-//				
-//				for(int x =2*(input-1); x>=1 ;x--) {
-//					
-//				}
-//			} 
-//		}
-	}
-	
-	
-	public void practice9() {
-		
-		int[] arr = new int[10];
-		System.out.print("발생한 난수 :");
-		for(int i =0 ; i < arr.length; i++) {
-		int ran =(int)(Math.random()*11);
-		System.out.printf("%3d",ran);
-		}
-		
-		
-	}
-	
-	public void practice10() {
-		
-		//최대값, 최소값
-		
-		int[] arr = new int[10];
-		
-		int ran = (int)Math.random()*11;
-		System.out.print("발생한 난수:");
-		for(int i = 0; i<arr.length; i++) {
-			arr[i]=ran;
-		System.out.print(ran);
-		}
-		
-		
-		//엥 왜 0000나옴? --
-	}
+
+}
+
+```
 	
 	
 	public void practice13() {
