@@ -259,35 +259,40 @@ public class ArrayPractice1 {
 	public void practice10() {
 
 		//최대값, 최소값
-//		int[] arr = new int[10];
-//		System.out.print("발생한 난수:");
-//		for(int i = 0; i<arr.length; i++) {
-//			int ran = (int)(Math.random()*10+1);
-//			arr[i]=ran;
-//			int max = arr[i];
-//			int min = arr[i];
-//			
-//			if(arr[i]>max) {
-//				max = arr[i];
-//			}
-//			
-//			if(arr[i]<min) {
-//				min = arr[i];
-//			}
-//			System.out.print(arr[i] + " ");
-//			
-//			
-//		}
-//		System.out.println("\n최대값 :" + max);
-//		System.out.println("최소값 :" + min);
-//		
+		int[] arr = new int[10];
+		System.out.print("발생한 난수:");
+		int i = 0;
+		int ran1 = (int)(Math.random()*10+1);
+		arr[0] = ran1;
+		int max = arr[0];
+		int min = arr[0];
+		for( i = 1; i<arr.length; i++) {
+			int ran2 = (int)(Math.random()*10+1);
+			arr[i]=ran2;
+			
+			
+			if(arr[i]>max) {
+				max = arr[i];
+			}
+			
+			if(arr[i]<min) {
+				min = arr[i];
+			}
+			System.out.print(arr[i] + " ");
+			
+			
+		}
+		System.out.println("\n최대값 :" + max);
+		System.out.println("최소값 :" + min);
+		
 //		엥 왜 0000나옴? --
 //		오류 해결 - (1)ramdom 쓸 때, () 붙이고
 //				(2) ran을 반복문 안에 넣어줘야지 매번 반복할 때마다 다른 random숫자가 나올 수 있다.
 //		
 //		오류 : 최대값,최소값이 기준을 arr[0]으로 지정해놔가지고 바뀌는 것 같길래 i로 바꿔줬더니 i+1을 몰라서 오류 생기는 듯
 //		max로 바꾸면 될듯!!!!!!!!! 대박 해결한듯
-//		아..아니었다..정수가 1~10이어가지고..ㅠㅠㅠ
+//		
+//		아 드뎌됨 ㅡㅡ
 	}
 	
 	public void practice13() {
