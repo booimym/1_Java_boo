@@ -12,6 +12,57 @@ public class Main {
 
 	private Scanner sc = new Scanner(System.in);
 	
+	public void baekJoon_25372() throws Exception{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int num = Integer.parseInt(br.readLine());
+		String input = null;
+		for (int i = 0 ; i < num ; i++) {
+			input = br.readLine();
+			
+			if (input.length()>=6 && input.length()<=9 ) {
+				bw.write("yes\n");
+			}else bw.write("no\n");
+		}
+		
+		/*
+		 * 
+		 * */
+		
+		
+		
+		
+		bw.flush();
+		bw.close();
+		
+		
+	}
+	
+	public void baekJoon_25314() throws Exception{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		
+		int input = Integer.parseInt(br.readLine());
+		
+		
+		for(int i = 0 ;i<(input/4) ;i++) {
+			
+			bw.write("long ") ;
+		}
+		
+		bw.write("int");
+		
+		bw.flush();
+		bw.close();
+		
+		
+	}
+	
+	
 	public void baekJoon_1110() throws Exception{
 		
 		
