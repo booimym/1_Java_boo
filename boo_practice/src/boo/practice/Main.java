@@ -12,6 +12,140 @@ public class Main {
 
 	private Scanner sc = new Scanner(System.in);
 	
+	public void backJoon_1357() throws Exception{
+		
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int sumX = 0;
+		int sumY = 0;
+		while(x>0) {
+			sumX += (x%10);
+			x /= 10;
+			
+		}
+		while(y>0) {
+			sumY += (y%10);
+			y /= 10;
+			
+		}
+		System.out.println(sumX);
+		System.out.println(sumY);
+	}
+	
+	public void backJoon_1357_1() throws Exception{
+	
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+//		int x = Integer.parseInt(st.nextToken());
+//		int y = Integer.parseInt(st.nextToken());
+		
+		String x = st.nextToken();
+		String y = st.nextToken();
+		System.out.println(x);
+		System.out.println(y);
+		
+		/*int형에서 각 자리수 숫자 뽑아내는 법*/
+		/*while(x>0) {
+			System.out.println(x%10);
+			x /= 10;
+		}
+		while(y>0) {
+			System.out.println(y%10);
+			y /= 10;
+		}*/
+		
+		switch(x.length()) {
+		case 1 : x= "000"+ x ;break;
+		case 2 : x= "00" + x  ; break;
+		case 3 : x= "0" + x  ; break;
+		case 4 : ; break;
+		}
+		switch(y.length()) {
+		case 1 : y= "00"+ y ;break;
+		case 2 : y= "0" + y  ; break;
+		case 3 : y= "0" + y ; break;
+		case 4 : ; break;
+		}
+		
+		System.out.println(x);
+		System.out.println(y);
+		
+		
+		String newX =String.valueOf(x.charAt(3))+
+				String.valueOf(x.charAt(2))+
+				String.valueOf(x.charAt(1))+
+				String.valueOf(x.charAt(0));
+		
+		String newY =String.valueOf(y.charAt(3))+
+				String.valueOf(y.charAt(2))+
+				String.valueOf(y.charAt(1))+
+				String.valueOf(y.charAt(0));
+		System.out.println(newX);
+		System.out.println(newY);
+		
+//		String plus = String.valueOf(Integer.parseInt(newX)+Integer.parseInt(newY));
+//		String newPlus = null;
+//		
+//		for(int i = 0; i < plus.length();i++) {
+//			
+//			newPlus += String.valueOf(plus.length()-plus.charAt(i));
+//		}
+//		
+//		
+//		
+//		System.out.println(newPlus);
+//		System.out.println(Integer.parseInt(newPlus));
+		
+		
+	}
+	
+	public void backJoon_10820() {	
+	
+	}
+	
+	public void baekJoon_1475() {
+	
+	}
+	
+	
+	public void baekJoon_8958() {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		try{
+				int num = Integer.parseInt(br.readLine());
+			
+			
+			int[] arr = new int[num];
+			
+			for(int ii = 0 ; ii < num ; ii++) {
+			
+				String str = br.readLine();
+				String[] result = str.split("X");
+				int sum = 0;
+				for(String s : result) {
+					
+					for(int i = 1;i<=s.length();i++) {
+						sum += (i);
+					}
+				}
+				arr[ii] = sum;
+			}
+			
+			for(int iii : arr) {
+				bw.write(String.valueOf(iii)+"\n");
+			}
+			bw.flush();
+			bw.close();
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	
 	public void baekJoon_25372() throws Exception{
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

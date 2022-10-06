@@ -19,7 +19,9 @@ public class MainRun {
 //			main.baekJoon_10951();
 			
 //			main.baekJoon_25314();
-			main.baekJoon_25372();
+//			main.baekJoon_25372();
+//			main.baekJoon_8958();
+			main.backJoon_1357();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
