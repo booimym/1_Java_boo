@@ -12,94 +12,96 @@ public class Main {
 
 	private Scanner sc = new Scanner(System.in);
 	
-	public void backJoon_1357() throws Exception{
-		
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		int sumX = 0;
-		int sumY = 0;
-		while(x>0) {
-			sumX += (x%10);
-			x /= 10;
-			
-		}
-		while(y>0) {
-			sumY += (y%10);
-			y /= 10;
-			
-		}
-		System.out.println(sumX);
-		System.out.println(sumY);
+	
+	
+	public  void baekJoon_9093_1() throws IOException {
+	        
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	        
+		int n = Integer.parseInt(br.readLine());  //n 입력받기
+	       
+		StringBuilder answer = new StringBuilder();  //최종 출력할 StringBuilder
+	       
+		for (int i = 0; i < n; i++) {
+	        StringTokenizer st = new StringTokenizer(br.readLine());
+	            while (st.hasMoreTokens()) {
+	                StringBuilder sb = new StringBuilder(st.nextToken());
+	                answer.append(sb.reverse() + " ");  //각 단어를 뒤집고 answer에 붙이기
+	            }
+	        answer.append("\n");
+	    }
+	        
+		System.out.print(answer);
 	}
 	
-	public void backJoon_1357_1() throws Exception{
 	
+	
+	
+	
+	public void baekJoon_9093() throws Exception{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int num = Integer.parseInt(br.readLine());
+		String[] arr = new String[num];
+		for(int i = 0; i<num ; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine()," ");
+			System.out.println(st.countTokens());
+			String[] arr2 = new String[st.countTokens()];
+			StringBuilder sb = new StringBuilder();
+			for(int ne = 1; ne<= st.countTokens();ne++) {
+			
+				StringBuilder sb2 = new StringBuilder(st.nextToken());
+				arr2[ne] = sb2.reverse().toString();
+				sb.append(arr2[ne]+" ");
+				
+			}
+			
+			System.out.println(sb.toString());
+			arr[i] = sb.toString();
+			 
+			
+		}
+		
+		for(String s : arr) {
+			System.out.println(s);
+		}
+	}
+	public void backJoon_1357() throws Exception{
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-//		int x = Integer.parseInt(st.nextToken());
-//		int y = Integer.parseInt(st.nextToken());
+		int x = Integer.parseInt(st.nextToken());
+		int y = Integer.parseInt(st.nextToken());
 		
-		String x = st.nextToken();
-		String y = st.nextToken();
-		System.out.println(x);
-		System.out.println(y);
-		
-		/*int형에서 각 자리수 숫자 뽑아내는 법*/
-		/*while(x>0) {
-			System.out.println(x%10);
-			x /= 10;
+		int revX = 0;
+		int revY = 0;
+		while(x > 0) {
+			
+			revX = revX * 10 + (x % 10);
+			x /= 10 ;
 		}
-		while(y>0) {
-			System.out.println(y%10);
-			y /= 10;
-		}*/
-		
-		switch(x.length()) {
-		case 1 : x= "000"+ x ;break;
-		case 2 : x= "00" + x  ; break;
-		case 3 : x= "0" + x  ; break;
-		case 4 : ; break;
-		}
-		switch(y.length()) {
-		case 1 : y= "00"+ y ;break;
-		case 2 : y= "0" + y  ; break;
-		case 3 : y= "0" + y ; break;
-		case 4 : ; break;
+		while(y > 0) {
+			
+			revY = revY * 10 + (y % 10);
+			y /= 10 ;
 		}
 		
-		System.out.println(x);
-		System.out.println(y);
+		int sum = revX + revY;
+		int revS = 0;
 		
+		while(sum > 0) {
+			
+			revS = revS * 10 + (sum % 10);
+			sum /= 10 ;
+		}
 		
-		String newX =String.valueOf(x.charAt(3))+
-				String.valueOf(x.charAt(2))+
-				String.valueOf(x.charAt(1))+
-				String.valueOf(x.charAt(0));
-		
-		String newY =String.valueOf(y.charAt(3))+
-				String.valueOf(y.charAt(2))+
-				String.valueOf(y.charAt(1))+
-				String.valueOf(y.charAt(0));
-		System.out.println(newX);
-		System.out.println(newY);
-		
-//		String plus = String.valueOf(Integer.parseInt(newX)+Integer.parseInt(newY));
-//		String newPlus = null;
-//		
-//		for(int i = 0; i < plus.length();i++) {
-//			
-//			newPlus += String.valueOf(plus.length()-plus.charAt(i));
-//		}
-//		
-//		
-//		
-//		System.out.println(newPlus);
-//		System.out.println(Integer.parseInt(newPlus));
-		
-		
+		System.out.println(revS);
 	}
+	
 	
 	public void backJoon_10820() {	
 	
@@ -116,7 +118,8 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		try{
-				int num = Integer.parseInt(br.readLine());
+			
+			int num = Integer.parseInt(br.readLine());
 			
 			
 			int[] arr = new int[num];

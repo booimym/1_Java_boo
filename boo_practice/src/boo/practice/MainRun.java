@@ -21,7 +21,9 @@ public class MainRun {
 //			main.baekJoon_25314();
 //			main.baekJoon_25372();
 //			main.baekJoon_8958();
-			main.backJoon_1357();
+//			main.backJoon_1357();
+//			main.baekJoon_9093();
+			main.baekJoon_9093_1();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
